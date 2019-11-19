@@ -1,0 +1,11 @@
+links:
+
+table bootstrap
+
+https://getbootstrap.com/docs/4.3/content/tables/
+
+Questions:
+Pictures
+Webkit
+
+Delete button:
