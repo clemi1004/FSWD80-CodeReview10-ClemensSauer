@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 19. Nov 2019 um 22:34
+-- Erstellungszeit: 19. Nov 2019 um 22:40
 -- Server-Version: 10.4.8-MariaDB
 -- PHP-Version: 7.1.33
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `cr10_clemens_sauer_biglibrary`
 --
+CREATE DATABASE IF NOT EXISTS `cr10_clemens_sauer_biglibrary` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cr10_clemens_sauer_biglibrary`;
 
 -- --------------------------------------------------------
 
