@@ -41,7 +41,9 @@
             <h1 class="text-white">Clemens Library</h1>
         </div>
     </header>
-
+<a href="create.php"><button type='button' class='btn btn-primary'>Create New Item</button></a>
+<br>
+<br>
 <!-- Connection to database -->
 <?php
 	$servername = "localhost";
@@ -68,12 +70,12 @@
         echo "<table class='table'>";
         echo "<thead>";
         echo "<tr>";
-        echo "<th scope='col'>ID</th> <th scope='col'>1</th> <th scope='col'>Picture</th> <th scope='col'>First Name</th> <th scope='col'>Last Name</th> <th scope='col'>ISBN</th> <th scope='col'>Book/CD</th> <th scope='col'>Short Description</th> <th scope='col'>Publish Date</th> <th scope='col'>Publisher</th> <th scope='col'>Adress 1</th> <th scope='col'>Adress 2</th> <th scope='col'>Size</th> <th scope='col'>Status</th>";
+        echo "<th scope='col'>ID</th> <th scope='col'>Title</th> <th scope='col'>Picture</th> <th scope='col'>First Name</th> <th scope='col'>Last Name</th> <th scope='col'>ISBN</th> <th scope='col'>Book/CD</th> <th scope='col'>Short Description</th> <th scope='col'>Publish Date</th> <th scope='col'>Publisher</th> <th scope='col'>Adress 1</th> <th scope='col'>Adress 2</th> <th scope='col'>Size</th> <th scope='col'>Status</th>";
         echo "</tr>";
         echo "</thead>";
         echo "<tbody>";
         while($row = $result->fetch_assoc()) {
-        echo "<tr><th scope='row'>". $row["pk_libraby_id"] ."</th><td>". $row["title"] ."</td><td><div class='pictures'><img src=". $row["img"] ."width='100'></div></td><td>". $row["surname_author"] ."</td><td>". $row["lastname_author"] ."</td><td>". $row["ISBN"] ."</td><td>". $row["type"] ."</td><td>". $row["short_description"] ."</td><td>". $row["publish_date"] ."</td><td>". $row["publisher_name"] ."</td><td>". $row["publisher_adress"] ."</td><td>". $row["publisher_city"] ."</td><td>". $row["publisher_size"] ."</td><td>". $row["status"] ."</td><td>" ."<button type='button' class='btn btn-danger'>delete</button>" ."<button type='button' class='btn btn-primary'>update</button>";
+        echo "<tr><th scope='row'>". $row["pk_libraby_id"] ."</th><td>". $row["title"] ."</td><td><div class='pictures'><img src=". $row["img"] ."width='100'></div></td><td>". $row["surname_author"] ."</td><td>". $row["lastname_author"] ."</td><td>". $row["ISBN"] ."</td><td>". $row["type"] ."</td><td>". $row["short_description"] ."</td><td>". $row["publish_date"] ."</td><td>". $row["publisher_name"] ."</td><td>". $row["publisher_adress"] ."</td><td>". $row["publisher_city"] ."</td><td>". $row["publisher_size"] ."</td><td>". $row["status"] ."</td><td><a href='delete.php?id=" .$row['pk_libraby_id']. "'><button type='button' class='btn btn-danger'>delete</button></a>" . "<a href='edit.php?id=" .$row['pk_libraby_id']. "'>" . "<button type='button' class='btn btn-primary'>update</button></a>";
         }
         } else {
          echo "0 results";
